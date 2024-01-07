@@ -9,6 +9,7 @@ import {
   FaTv,
   FaWifi,
 } from "react-icons/fa";
+import PaymentReusable from "./PaymentReusable";
 
 const ServicesComponent = () => {
   // Sample data for Paytm services
@@ -63,7 +64,6 @@ const ServicesComponent = () => {
             <span className="text-[10px] leading-none  place-items-center lg:hidden ">
               {service?.mob__title}
             </span>
-
           </button>
         ))}
       </div>
@@ -72,10 +72,9 @@ const ServicesComponent = () => {
           <h2 className="text-2xl font-bold mb-4">
             Selected Service: {selectedService}
           </h2>
-          <p className="text-lg">
-            {/* Placeholder text for description */}
-            Description for {selectedService} service goes here...
-          </p>
+          <div className="text-lg">
+            <PaymentReusable services={services} />
+          </div>
         </div>
       )}
     </section>

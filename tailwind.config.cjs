@@ -13,6 +13,20 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      keyframes: {
+        ping: {
+          "0%": {
+            opacity:1,
+          },
+          "75%, 100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+      },
+      animation: {
+        ping: "ping 4s cubic-bezier(0,0,0.2,1) infinite",
+      },
     },
     screens: {
       xs: "480px",

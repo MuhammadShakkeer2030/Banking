@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
 
-const EducationFeeService = () => {
+export const EducationFeeService = () => {
   return (
     <div className="flex flex-col items-center p-4 rounded-md shadow-lg feature-card hover:feature-card:hover">
       <div className="text-3xl text-gradient">
@@ -15,4 +15,3 @@ const EducationFeeService = () => {
   );
 };
 
-export default EducationFeeService;

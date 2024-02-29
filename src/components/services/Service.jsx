@@ -8,7 +8,7 @@ import {
   FaTv,
   FaWifi,
 } from "react-icons/fa";
-import PaymentReusable from "./ReusableService";
+// import PaymentReusable from "./ReusableService";
 import {
   AllPaymentServices,
   BroadbandBillService,

@@ -10,6 +10,7 @@ import { GasCylinderService } from "./components/services/GasCylinderService";
 import { LoanRepaymentCalculator } from "./components/FinancialTools/LoanRepaymentCalculator";
 import { BudgetCalculator } from "./components/FinancialTools/BudgetCalculator";
 import FinancialTools from "./components/FinancialTools/FinancialTools";
+import { SIPCalculator } from "./components/FinancialTools/SIPCalculator";
 export {
   RechargeService,
   PrepaidMobileService,
@@ -21,5 +22,6 @@ export {
   GasCylinderService,
   LoanRepaymentCalculator,
   BudgetCalculator,
+  SIPCalculator,
   FinancialTools,
 };

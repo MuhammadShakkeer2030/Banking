@@ -7,7 +7,8 @@ import { DTHConnectionService } from "./components/services/DTHConnectionService
 
 import { EducationFeeService } from "./components/services/EducationFeeService";
 import { GasCylinderService } from "./components/services/GasCylinderService";
-
+import { LoanRepaymentCalculator } from "./components/FinancialTools/LoanRepaymentCalculator";
+import { BudgetCalculator } from "./components/FinancialTools/BudgetCalculator";
 import FinancialTools from "./components/FinancialTools/FinancialTools";
 export {
   RechargeService,
@@ -18,5 +19,7 @@ export {
   DTHConnectionService,
   EducationFeeService,
   GasCylinderService,
-  FinancialTools
+  LoanRepaymentCalculator,
+  BudgetCalculator,
+  FinancialTools,
 };

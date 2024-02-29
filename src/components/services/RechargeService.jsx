@@ -108,6 +108,12 @@ export const RechargeService = () => {
       ) : (
         <div className="text-green-500 text-center mt-3">
           Recharge successful!
+          <button
+            className="bg-blue-gradient text-white font-bold py-2 px-4 rounded"
+            onClick={() => SetSuccessMessage(false)}
+          >
+            Recharge
+          </button>
         </div>
       )}
     </div>

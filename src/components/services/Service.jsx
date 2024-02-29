@@ -88,7 +88,10 @@ const ServicesComponent = () => {
   };
 
   return (
-    <section className="bg-black-gradient-2 py-16 px-8 text-white">
+    <section
+      id="services"
+      className="bg-black-gradient-2 py-16 px-8 text-white"
+    >
       <h1 className="text-4xl font-bold mb-8">Services</h1>
       <div className="grid grid-cols-4 gap-4">
         {services.map((service) => (

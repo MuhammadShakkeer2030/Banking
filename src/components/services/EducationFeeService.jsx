@@ -14,7 +14,10 @@ export const EducationFeeService = () => {
         <FaGraduationCap />
       </div>
       <span className="text-lg font-semibold mt-2 mb-4">Pay Education Fee</span>
-      <button onClick={handlePayment} className="bg-blue-gradient text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out">
+      <button
+        onClick={handlePayment}
+        className="bg-blue-gradient text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-300 ease-in-out"
+      >
         Pay Now
       </button>
     </div>

@@ -8,6 +8,7 @@ import { DTHConnectionService } from "./components/services/DTHConnectionService
 import { EducationFeeService } from "./components/services/EducationFeeService";
 import { GasCylinderService } from "./components/services/GasCylinderService";
 
+import FinancialTools from "./components/FinancialTools/FinancialTools";
 export {
   RechargeService,
   PrepaidMobileService,
@@ -17,4 +18,5 @@ export {
   DTHConnectionService,
   EducationFeeService,
   GasCylinderService,
+  FinancialTools
 };

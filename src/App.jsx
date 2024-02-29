@@ -1,7 +1,19 @@
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero ,} from "./components";
+import {
+  Billing,
+  Business,
+  CardDeal,
+  Clients,
+  CTA,
+  Footer,
+  Navbar,
+  Stats,
+  Testimonials,
+  Hero,
+} from "./components";
 import Service from "./components/services/Service";
 import { stats } from "./constants";
+import { FinancialTools } from "./paths";
 
 const App = () => (
   <div className="bg-primary w-full overflow-hidden">
@@ -16,18 +28,20 @@ const App = () => (
         <Hero />
       </div>
     </div>
-    
+
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Service/>
+        <Service />
         <section
-      className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}
-    >
-
-        {stats?.map((stat)=><Stats  stat={stat}/>)}
-    </section>
+          className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}
+        >
+          {stats?.map((stat) => (
+            <Stats key={stat.id} stat={stat} />
+          ))}
+        </section>
 
         <Business />
+        <FinancialTools/>
         <Billing />
         <CardDeal />
         <Testimonials />

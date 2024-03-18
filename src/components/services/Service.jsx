@@ -90,9 +90,9 @@ const ServicesComponent = () => {
   return (
     <section
       id="services"
-      className="bg-black-gradient-2 py-16 px-8 text-white"
+      className="bg-black-gradient-2 py-3 xl:py-16 px-4 xl:px-8 text-white"
     >
-      <h1 className="text-4xl font-bold mb-8">Services</h1>
+      <h1 className="text-2xl xl:text-4xl font-bold mb-8">Services</h1>
       <div className="grid grid-cols-4 gap-4">
         {services.map((service) => (
           <button

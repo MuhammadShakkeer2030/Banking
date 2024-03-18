@@ -18,13 +18,23 @@ import {
   GasCylinderService,
   PrepaidMobileService,
   RechargeService,
+  ServiceComponent,
 } from "../../paths";
+
+import {
+  broadbandServices,
+  dthServices,
+  electricityServices,
+  gasServices,
+  mobileServices,
+} from "./resuble/serviceUtlities";
 
 const ServicesComponent = () => {
   const services = [
     {
       id: 1,
       name: "Recharge",
+      category: "recharge",
       icon: <FaMobile />,
       mob__title: "Recharge",
       component: <RechargeService />,
@@ -32,6 +42,7 @@ const ServicesComponent = () => {
     {
       id: 2,
       name: "Prepaid Mobile",
+      category: "prepaid",
       icon: <FaMobile />,
       mob__title: "Prepaid",
       component: <PrepaidMobileService />,
@@ -39,6 +50,7 @@ const ServicesComponent = () => {
     {
       id: 3,
       name: "Pay Electricity Bill",
+      category: "electricity",
       icon: <FaBolt />,
       mob__title: "Electricity",
       component: <ElectricityBillService />,
@@ -46,6 +58,7 @@ const ServicesComponent = () => {
     {
       id: 4,
       name: "Recharge DTH Connection",
+      category: "dth",
       icon: <FaTv />,
       mob__title: "DTH",
       component: <DTHConnectionService />,
@@ -53,6 +66,7 @@ const ServicesComponent = () => {
     {
       id: 5,
       name: "Book Gas Cylinder",
+      category: "gas",
       icon: <FaGasPump />,
       mob__title: "Gas",
       component: <GasCylinderService />,
@@ -60,6 +74,7 @@ const ServicesComponent = () => {
     {
       id: 6,
       name: "Pay Broadband & Landline Bill",
+      category: "boradband",
       icon: <FaWifi />,
       mob__title: "Broadband",
       component: <BroadbandBillService />,
@@ -67,6 +82,7 @@ const ServicesComponent = () => {
     {
       id: 7,
       name: "Pay Education Fee",
+      category: "education",
       icon: <FaGraduationCap />,
       mob__title: "Education",
       component: <EducationFeeService />,
@@ -74,17 +90,27 @@ const ServicesComponent = () => {
     {
       id: 8,
       name: "All Payment Services",
+      category: "",
       icon: <FaMoneyBill />,
       mob__title: "Services",
       component: <AllPaymentServices />,
     },
   ];
 
-  const [selectedService, setSelectedService] = useState("");
-  const [filteredServiceComponent, setFilteredServiceComponent] = useState();
-  const showServiceFeature = (serviceName, ServiceComponent) => {
-    setSelectedService(serviceName);
-    setFilteredServiceComponent(ServiceComponent);
+  const [selectedService, setSelectedService] = useState({
+    resuableName: "",
+    resuableCategory: "",
+    resuableProviders: "",
+    resuableplans: {},
+  });
+
+  const showServiceFeature = (serviceName, ServiceComponent, category) => {
+    console.log(serviceName, ServiceComponent, category);
+    setSelectedService({
+      resuableName: serviceName,
+      resuableCategory: category,
+    });
+    console.log("now clicked",selectedService);
   };
 
   return (
@@ -92,7 +118,7 @@ const ServicesComponent = () => {
       id="services"
       className="bg-black-gradient-2 py-3 xl:py-16 px-4 xl:px-8 text-white"
     >
-      <h1 className="text-2xl xl:text-4xl font-bold mb-8">Services</h1>
+      <h1 className="text-2xl xl:text-4xl font-bold mb-4 xl:mb-8">Services</h1>
       <div className="grid grid-cols-4 gap-4">
         {services.map((service) => (
           <button
@@ -101,7 +127,11 @@ const ServicesComponent = () => {
               selectedService?.name === service?.name ? "text-primary" : ""
             }`}
             onClick={() =>
-              showServiceFeature(service?.name, service?.component)
+              showServiceFeature(
+                service?.name,
+                service?.component,
+                service?.category
+              )
             }
           >
             <span>{service?.icon}</span>
@@ -115,13 +145,14 @@ const ServicesComponent = () => {
         ))}
       </div>
       {selectedService && (
-        <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">
-            Selected Service: {selectedService}
+        <div className="mt-4 xl:mt-8">
+          <h2 className=" xl:text-2xl font-bold xl:mb-4">
+            Selected Service: {selectedService.Name}
           </h2>
           <div className="text-lg">
             {/* Display selected Service feature */}
-            {filteredServiceComponent}
+            {/* {filteredServiceComponent} */}
+            <ServiceComponent />
           </div>
         </div>
       )}

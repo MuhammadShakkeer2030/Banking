@@ -10,11 +10,13 @@ import { LoanRepaymentCalculator } from "./components/FinancialTools/LoanRepayme
 import { BudgetCalculator } from "./components/FinancialTools/BudgetCalculator";
 import FinancialTools from "./components/FinancialTools/FinancialTools";
 import { SIPCalculator } from "./components/FinancialTools/SIPCalculator";
-import {PrepaidMobileService} from "./components/services/PrepaidMobileService";
+import { PrepaidMobileService } from "./components/services/PrepaidMobileService";
+import { ServiceComponent } from "./components/services/resuble/ServiceComponent";
 export {
   RechargeService,
   PrepaidMobileService,
   ElectricityBillService,
+  ServiceComponent,
   AllPaymentServices,
   BroadbandBillService,
   DTHConnectionService,
